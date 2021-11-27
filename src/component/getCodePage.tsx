@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 export const GetCodePage = () => {
 
-    const fqnd = msdata.fqnd
+    const fqdn = msdata.fqdn
     const client_id = msdata.client_id
     const client_secret = msdata.client_secret
     const redirect_uri = msdata.redirect_uri
@@ -28,20 +28,19 @@ export const GetCodePage = () => {
         }
 
         if (code) {
-            getToken(fqnd, grant_type, client_id, client_secret, redirect_uri, code)
+            getToken(fqdn, grant_type, client_id, client_secret, redirect_uri, code)
                 .then((data: any) => {
                     setToken(data.access_token)
                     console.log(data.access_token)
                 })
         }
-    }, [client_id, client_secret, code, fqnd, grant_type, redirect_uri, setCode,setToken])
+    }, [client_id, client_secret, code, fqdn, grant_type, redirect_uri, setCode,setToken])
 
     return (
         <div>
-            <a href={fqnd + '/oauth/authorize?response_type=' + response_type + '&client_id=' + client_id + '&redirect_uri=' + redirect_uri}> click </a>
+            <a href={fqdn + '/oauth/authorize?response_type=' + response_type + '&client_id=' + client_id + '&redirect_uri=' + redirect_uri}> click </a>
             <div>Code : {code}</div>
             <div>Token : {token}</div>
         </div>
     )
 }
-

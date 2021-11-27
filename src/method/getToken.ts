@@ -1,10 +1,10 @@
-export const getToken = async (fqnd: string, grant_type: string, client_id: string, client_secret: string, redirect_uri: string, code: string) => {
+export const getToken = async (fqdn: string, grant_type: string, client_id: string, client_secret: string, redirect_uri: string, code: string) => {
 
     const data = {
         grant_type, client_id, client_secret, redirect_uri, code
     }
 
-    const response = await fetch(fqnd + '/oauth/token',  {
+    const response = await fetch(fqdn + '/oauth/token',  {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
