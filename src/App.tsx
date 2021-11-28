@@ -1,10 +1,10 @@
 import React from 'react';
-import { GetCodePage } from './component/getCodePage';
+import { GetDataPage } from './component/getDataPage';
 
 function App() {
   return (
     <div>
-      <GetCodePage />
+      <GetDataPage />
     </div>
   );
 }

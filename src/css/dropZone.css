@@ -1,0 +1,13 @@
+.viewimg {
+    height: 150px;
+    display: block;
+}
+
+.imgdata {
+    display: inline-block;
+    margin: 5px;
+}
+
+li {
+    list-style: none;
+}
