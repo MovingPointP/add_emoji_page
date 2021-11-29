@@ -24,3 +24,8 @@ export const textState = atom<string[]>({
     key: 'textState',
     default: []
 })
+
+export const errorState = atom<any[]>({
+    key: 'errorState',
+    default: []
+})

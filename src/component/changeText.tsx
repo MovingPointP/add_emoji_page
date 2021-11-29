@@ -14,7 +14,6 @@ export const ChangeText = (props: any) => {
     return (
         <div>
             <input value={text[props.index] || ''} onChange={(e) => changeText(props.index, e)} type="text" required spellCheck="false" />
-            <div>{text[props.index]} </div>
         </div>
     )
 }
