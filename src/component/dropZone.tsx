@@ -46,6 +46,7 @@ export const DropZone = () => {
                         <p>Drop the files here ...</p> :
                         <p>Drag 'n' drop some files here</p>
                 }
+               
             </div>
             <button type="button" onClick={open}>Select files</button>
         </div>
