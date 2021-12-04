@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil';
-import { acfileState, textState, errorState, tokenState, imgState } from '../atom/state';
+import { acfileState, textState, errorState, tokenState } from '../atom/state';
 import { scrollPos, transpose,  submitData } from '../method/method4Submit';
 
 import { checkFileSize, checkEmptyName, checkArrayLength } from '../method/checkData'
@@ -7,7 +7,6 @@ import { checkFileSize, checkEmptyName, checkArrayLength } from '../method/check
 export const SubmitButton = () => {
 
     const [acfile] = useRecoilState(acfileState)
-    const [img] = useRecoilState(imgState)
     const [text] = useRecoilState(textState)
     const [, setError] = useRecoilState(errorState)
     const [token] = useRecoilState(tokenState)
@@ -34,9 +33,15 @@ export const SubmitButton = () => {
             } else {
                 setError(transpose(errMesArray))
                 console.log(boolArray)
-                submitData(img, acfile, text, token)
-                    .then((data: any) => {
-                        console.log(data)
+                submitData(acfile, text, token)
+                    .then((res: any) => {
+                        if (res.status === '200') {
+
+                            console.log(res.json())
+                        } else {
+                            console.log('error')
+                            console.log(res.json())
+                        }
                     })
             }
         }

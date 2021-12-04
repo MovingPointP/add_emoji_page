@@ -1,8 +1,9 @@
 {
     "fqdn": "https://mstdn.rkunkunr.com",
-    "client_id": "_HDsDWbR0ab89qi-dA6U3WXxe3D8RsvC-y_lizLLry0",
-    "client_secret": "0EfxOfKh7SP8mBy_c9OgXf_yOzPPnghvkSGY7XlEf7M",
+    "client_id": "8lIDix0nORmDxK0ttwARY8Vu3cGdhNimSntHA6TVhf0",
+    "client_secret": "utm1AIF-7ZE7VaL9jZQfTgVeYcxf1GlI3fk9qhxPhCY",
     "redirect_uri": "http://localhost:3000",
     "response_type": "code",
-    "grant_type": "authorization_code"
+    "grant_type": "authorization_code",
+    "scope": "read write"
 }

@@ -15,7 +15,7 @@ export const scrollPos = (posArray: number[]) => {
 
 export const transpose = (a: any[]) => a[0].map((_: any, c: any) => a.map(r => r[c]));
 
-export const submitData = async (img: any[], acfile: any[], text: string[], token: string) => {
+export const submitData = async (acfile: any[], text: string[], token: string) => {
 
     const fqdn = msdata.fqdn
     const formData = new FormData() 
@@ -42,5 +42,5 @@ export const submitData = async (img: any[], acfile: any[], text: string[], toke
         headers: headers
     })
 
-    return response.json()
+    return response
 }

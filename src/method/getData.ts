@@ -18,9 +18,10 @@ export const getToken = async (code: string) => {
     const client_secret = msdata.client_secret
     const redirect_uri = msdata.redirect_uri
     const grant_type = msdata.grant_type
+    const scope = msdata.scope
 
     const data = {
-        grant_type, client_id, client_secret, redirect_uri, code
+        grant_type, client_id, client_secret, redirect_uri, code, scope
     }
 
     const response = await fetch(fqdn + '/oauth/token',  {
