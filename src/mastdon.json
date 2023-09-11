@@ -1,9 +1,0 @@
-{
-    "fqdn": "https://mstdn.rkunkunr.com",
-    "client_id": "8lIDix0nORmDxK0ttwARY8Vu3cGdhNimSntHA6TVhf0",
-    "client_secret": "utm1AIF-7ZE7VaL9jZQfTgVeYcxf1GlI3fk9qhxPhCY",
-    "redirect_uri": "http://localhost:3000",
-    "response_type": "code",
-    "grant_type": "authorization_code",
-    "scope": "read write"
-}
